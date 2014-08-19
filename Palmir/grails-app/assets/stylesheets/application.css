@@ -9,5 +9,7 @@
 *
 *= require main
 *= require mobile
+*= require jquery-ui.min
+*= require palmi
 *= require_self
 */

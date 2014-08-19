@@ -24,11 +24,17 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="nome" title="${message(code: 'residuo.nome.label', default: 'Nome')}" />
+						<g:sortableColumn property="codigoLER" title="${message(code: 'residuo.codigoLER.label', default: 'Codigo LER')}" />
 					
 						<g:sortableColumn property="descricao" title="${message(code: 'residuo.descricao.label', default: 'Descricao')}" />
 					
-						<th><g:message code="residuo.tr.label" default="Tr" /></th>
+						<g:sortableColumn property="quantidade" title="${message(code: 'residuo.quantidade.label', default: 'Quantidade')}" />
+					
+						<g:sortableColumn property="unidadeDeMedida" title="${message(code: 'residuo.unidadeDeMedida.label', default: 'Unidade De Medida')}" />
+					
+						<g:sortableColumn property="amostra" title="${message(code: 'residuo.amostra.label', default: 'Amostra')}" />
+					
+						<g:sortableColumn property="nIdAmostra" title="${message(code: 'residuo.nIdAmostra.label', default: 'N Id Amostra')}" />
 					
 					</tr>
 				</thead>
@@ -36,11 +42,17 @@
 				<g:each in="${residuoInstanceList}" status="i" var="residuoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${residuoInstance.id}">${fieldValue(bean: residuoInstance, field: "nome")}</g:link></td>
+						<td><g:link action="show" id="${residuoInstance.id}">${fieldValue(bean: residuoInstance, field: "codigoLER")}</g:link></td>
 					
 						<td>${fieldValue(bean: residuoInstance, field: "descricao")}</td>
 					
-						<td>${fieldValue(bean: residuoInstance, field: "tr")}</td>
+						<td>${fieldValue(bean: residuoInstance, field: "quantidade")}</td>
+					
+						<td>${fieldValue(bean: residuoInstance, field: "unidadeDeMedida")}</td>
+					
+						<td><g:formatBoolean boolean="${residuoInstance.amostra}" /></td>
+					
+						<td>${fieldValue(bean: residuoInstance, field: "nIdAmostra")}</td>
 					
 					</tr>
 				</g:each>

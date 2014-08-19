@@ -7,6 +7,7 @@
 //
 //= require jquery
 //= require js/jquery-ui-1.10.3.custom.min
+//= require palmi
 //= require_tree .
 //= require_self
 

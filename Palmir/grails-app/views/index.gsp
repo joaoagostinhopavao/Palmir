@@ -117,6 +117,22 @@
 					</g:each>
 				</ul>
 			</div>
+			<h2>Containers</h2>
+                                <div class="ui-widget">
+                                    <div class="ui-widget-header ui-corner-top">
+                
+                                    <h2>Este é um contentor .ui-widget-header</h2> 
+                                    </div>
+                                <div class="ui-widget-content ui-corner-bottom">
+                                    <p>Este é um contentor .ui-widget-content</p>
+                                </div>
+                                </div>
+			<a href="residuo/index.gsp">Carregue aqui</a>
 		</div>
+		
+		
+		
+		
+		
 	</body>
 </html>

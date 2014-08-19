@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list residuo">
 			
-				<g:if test="${residuoInstance?.nome}">
+				<g:if test="${residuoInstance?.codigoLER}">
 				<li class="fieldcontain">
-					<span id="nome-label" class="property-label"><g:message code="residuo.nome.label" default="Nome" /></span>
+					<span id="codigoLER-label" class="property-label"><g:message code="residuo.codigoLER.label" default="Codigo LER" /></span>
 					
-						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${residuoInstance}" field="nome"/></span>
+						<span class="property-value" aria-labelledby="codigoLER-label"><g:fieldValue bean="${residuoInstance}" field="codigoLER"/></span>
 					
 				</li>
 				</g:if>
@@ -41,11 +41,47 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${residuoInstance?.tr}">
+				<g:if test="${residuoInstance?.quantidade}">
 				<li class="fieldcontain">
-					<span id="tr-label" class="property-label"><g:message code="residuo.tr.label" default="Tr" /></span>
+					<span id="quantidade-label" class="property-label"><g:message code="residuo.quantidade.label" default="Quantidade" /></span>
 					
-						<span class="property-value" aria-labelledby="tr-label"><g:link controller="tipoResiduo" action="show" id="${residuoInstance?.tr?.id}">${residuoInstance?.tr?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="quantidade-label"><g:fieldValue bean="${residuoInstance}" field="quantidade"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${residuoInstance?.unidadeDeMedida}">
+				<li class="fieldcontain">
+					<span id="unidadeDeMedida-label" class="property-label"><g:message code="residuo.unidadeDeMedida.label" default="Unidade De Medida" /></span>
+					
+						<span class="property-value" aria-labelledby="unidadeDeMedida-label"><g:fieldValue bean="${residuoInstance}" field="unidadeDeMedida"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${residuoInstance?.amostra}">
+				<li class="fieldcontain">
+					<span id="amostra-label" class="property-label"><g:message code="residuo.amostra.label" default="Amostra" /></span>
+					
+						<span class="property-value" aria-labelledby="amostra-label"><g:formatBoolean boolean="${residuoInstance?.amostra}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${residuoInstance?.nIdAmostra}">
+				<li class="fieldcontain">
+					<span id="nIdAmostra-label" class="property-label"><g:message code="residuo.nIdAmostra.label" default="N Id Amostra" /></span>
+					
+						<span class="property-value" aria-labelledby="nIdAmostra-label"><g:fieldValue bean="${residuoInstance}" field="nIdAmostra"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${residuoInstance?.servico}">
+				<li class="fieldcontain">
+					<span id="servico-label" class="property-label"><g:message code="residuo.servico.label" default="Servico" /></span>
+					
+						<span class="property-value" aria-labelledby="servico-label"><g:link controller="servicoNoProdutor" action="show" id="${residuoInstance?.servico?.id}">${residuoInstance?.servico?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
