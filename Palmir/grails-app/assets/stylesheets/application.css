@@ -11,5 +11,6 @@
 *= require mobile
 *= require jquery-ui.min
 *= require palmi
+*= require mycss
 *= require_self
 */

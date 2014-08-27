@@ -14,8 +14,10 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
   		<asset:stylesheet src="application.css"/>
   		<asset:stylesheet src="palmi.css"/>
+  		<asset:stylesheet src="mycss.css"/>
 		<asset:javascript src="application.js"/>
 		<asset:javascript src="palmi.js"/>
+		<asset:javascript src="myjs.js"/>
 		<g:layoutHead/>
 	</head>
 	<body>

@@ -1,0 +1,269 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/Jun/2014, 23:22:47
+    Author     : jpavao
+*/
+#aa{
+    width:180px;
+    background-color: black;
+    margin:10px auto;
+}
+/*--------------- Icons -----------------*/
+
+.ui-button .ui-icon .palmiIcon{
+    background-image: url(../img/botoes_menu_palmresiduos.png); //imagem no estado normal
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width:100px;
+    height: 150px;
+    border:1px solid red;
+    
+}
+
+.ui-button .ui-state-hover .ui-icon .palmiIcon{
+    background-image: url(botoes_menu_palmresiduos.png); //imagem no estado hover
+    width:24px;
+    height: 30px;
+}
+
+/*----------------- Botoes ----------------*/
+#buttonPalmi{
+    width:144px;
+    height: 144px;
+}
+
+/*----------------- Menu --------------------*/
+div#menu{
+    width:1024px;
+    height:413px;
+    border:1px solid red;
+}
+
+ /*--------------- Sub menu ------------------*/
+
+div#criarCard{
+    background: url("images/box_submenu_palmresiduos.png") 0px 0px;  
+    width:684px;
+    height: 173px;
+    margin:-40px auto;
+    
+    
+   
+}
+
+div#consultarCard{
+    background: url("images/box_submenu_palmresiduos.png") 0px -183px;  
+    width:684px;
+    height: 173px;
+    margin:-40px auto;
+    
+}
+
+div#editarCard{
+    background: url("images/box_submenu_palmresiduos.png") 0px -366px;  
+    width:684px;
+    height: 173px;
+    margin:-40px auto;
+    
+}
+
+.col{
+    width:226px;
+    height: 171px;
+    //border: 1px solid red;
+    float:left;
+}
+
+        /*---------------- Toolbar ------------------*/
+
+#palmiToolbarWrapper{
+    width:1024px;
+    height: 240px;
+    background: url("images/faixa_menu_palmresiduos.png");
+}
+
+#palmiToolbar{
+    width: 685px;
+    margin:5px auto;
+}
+
+
+.palmiCriar{
+    display:block;
+    background-repeat: no-repeat;
+    background: url("images/botoes_menu_palmresiduos.png") 40px 0;
+    width:144px;
+    height: 170px;
+    
+    //border:1px solid red;
+}
+
+.palmiCriarHover{
+    background: url("images/botoes_menu_palmresiduos.png") 40px -216px;  
+    width:144px;
+    height: 170px;
+}
+
+.palmiCriarEnable{
+    background: url("images/botoes_menu_palmresiduos.png") 40px -432px;  
+    width:144px;
+    height: 170px;
+}
+
+.palmiCriarDisable{
+    background: url("images/botoes_menu_palmresiduos.png") 40px -648px;  
+    width:144px;
+    height: 170px;
+}
+
+
+.palmiConsultar{
+    display:block;
+    background: url("images/botoes_menu_palmresiduos.png") -176px 0;
+    width:144px;
+    height: 170px;
+    border-left:2px solid grey;
+    border-right:2px solid grey;
+}
+
+.palmiConsultarHover{
+    background: url("images/botoes_menu_palmresiduos.png") -176px -216px;  
+    width:144px;
+    height: 170px;
+}
+
+.palmiConsultarEnable{
+    background: url("images/botoes_menu_palmresiduos.png") -176px -432px;  
+    width:144px;
+    height: 170px;
+}
+
+.palmiConsultarDisable{
+    background: url("images/botoes_menu_palmresiduos.png") -176px -648px;  
+    width:144px;
+    height: 170px;
+}
+
+
+.palmiEditar{
+    display:block;
+    background: url("images/botoes_menu_palmresiduos.png") -392px 0;
+    width:144px;
+    height: 170px;
+    //border:1px solid red;
+}
+
+.palmiEditarHover{
+    background: url("images/botoes_menu_palmresiduos.png") -392px -216px;  
+    width:144px;
+    height: 170px;
+}
+
+.palmiEditarEnable{
+    background: url("images/botoes_menu_palmresiduos.png") -392px -432px;  
+    width:144px;
+    height: 170px;
+}
+
+.palmiEditarDisable{
+    background: url("images/botoes_menu_palmresiduos.png") -392px -648px;  
+    width:144px;
+    height: 170px;
+}
+
+/*---------------- Painel de Submenu -----------------*/
+
+.subMenuButton{
+    width:160px;
+    height: 56px;
+    //border:1px solid blue;
+    color:#595959;
+    font-family:Arial,Verdana,sans-serif;
+    font-style:normal;
+    font-variant:small-caps;
+    font-size: 0.9em;
+    
+    
+}
+
+
+
+.col>a{
+    display:block;
+    //border:1px solid red;
+    float:left;
+    margin-top: 15px;
+    height:22px;
+    padding:3px 0 0 10px;
+    text-decoration: none;
+    
+}
+
+.col>span{
+    display:block;
+    width:30px;
+    height:22px;
+    //border: 1px solid brown;
+    float:left;
+    margin-top:15px;
+}
+
+.viaturasIco{
+    background: url("images/icon_submenu_palmresiduos.png");
+}
+.utilizadoresIco{
+    background: url("images/icon_submenu_palmresiduos.png") 0 -26px;
+}
+
+.transportadoresIco{
+    background: url("images/icon_submenu_palmresiduos.png") 0 -51px;
+}
+.servicosIco{
+    background: url("images/icon_submenu_palmresiduos.png") -40px 0px;
+}
+.residuosIco{
+    background: url("images/icon_submenu_palmresiduos.png") -40px -26px;
+}
+.catResiduosIco{
+    background: url("images/icon_submenu_palmresiduos.png") -40px -51px;
+}
+.entidadesIco{
+    background: url("images/icon_submenu_palmresiduos.png") -71px 0px;
+}
+.garIco{
+    background: url("images/icon_submenu_palmresiduos.png") -71px -26px;
+}
+.garCdIco{
+    background: url("images/icon_submenu_palmresiduos.png") -71px -51px;
+}
+
+
+#buttonPalmi>span.ui-icon-custom{
+    background-color: white;
+    border:none;
+    background-image: url("images/botoes_menu_palmresiduos.png");
+    //border:1px solid red;
+    background-position: 0px 0px;
+    width:144px;
+    height: 144px;
+    position: absolute;
+    left:8px;
+    top:8px;
+}
+
+/*----------------- Form ------------------*/
+#ic{margin-top:8px;margin:5px 3px 0 4px;}
+.ui-form{width:470px;margin:0 auto;}
+.ui-form .ui-widget-header h2{margin:10px 0 10px 20px;font-style:italic;}
+.ui-form .ui-widget-content{padding: 5px;}
+.ui-form label, .ui-form input, .ui-form .ui-state-error, .ui-form .ui-icon,
+.ui-form .ui-state-error p{float:left;}
+.ui-form label, .ui-state-error p {font-size:12px;padding:10px 10px 0 0;}
+.ui-form .ui-state-error{padding:4px; width:330px;}
+.ui-form .uistate-error p{font-weight: bold;padding-top: 5px;}
+.ui-form .uistate-error .ui-icon {/*margin:5px 3px 0 4px;*/border:1px solid red;}
+.ui-helper-clearfix:before,.ui-helper-clearfix:after{margin-top: 10px;}
