@@ -7,7 +7,7 @@ import spock.lang.*
 
 @TestFor(ProdutoResiduoController)
 @Mock(ProdutoResiduo)
-class ResiduoControllerSpec extends Specification {
+class ProdutoResiduoControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
@@ -21,8 +21,8 @@ class ResiduoControllerSpec extends Specification {
             controller.index()
 
         then:"The model is correct"
-            !model.residuoInstanceList
-            model.residuoInstanceCount == 0
+            !model.produtoResiduoInstanceList
+            model.produtoResiduoInstanceCount == 0
     }
 
     void "Test the create action returns the correct model"() {
@@ -30,7 +30,7 @@ class ResiduoControllerSpec extends Specification {
             controller.create()
 
         then:"The model is correctly created"
-            model.residuoInstance!= null
+            model.produtoResiduoInstance!= null
     }
 
     void "Test the save action correctly persists an instance"() {
@@ -38,23 +38,23 @@ class ResiduoControllerSpec extends Specification {
         when:"The save action is executed with an invalid instance"
             request.contentType = FORM_CONTENT_TYPE
             request.method = 'POST'
-            def residuo = new ProdutoResiduo()
-            residuo.validate()
-            controller.save(residuo)
+            def produtoResiduo = new ProdutoResiduo()
+            produtoResiduo.validate()
+            controller.save(produtoResiduo)
 
         then:"The create view is rendered again with the correct model"
-            model.residuoInstance!= null
+            model.produtoResiduoInstance!= null
             view == 'create'
 
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            residuo = new ProdutoResiduo(params)
+            produtoResiduo = new ProdutoResiduo(params)
 
-            controller.save(residuo)
+            controller.save(produtoResiduo)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/residuo/show/1'
+            response.redirectedUrl == '/produtoResiduo/show/1'
             controller.flash.message != null
             ProdutoResiduo.count() == 1
     }
@@ -68,11 +68,11 @@ class ResiduoControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def residuo = new ProdutoResiduo(params)
-            controller.show(residuo)
+            def produtoResiduo = new ProdutoResiduo(params)
+            controller.show(produtoResiduo)
 
         then:"A model is populated containing the domain instance"
-            model.residuoInstance == residuo
+            model.produtoResiduoInstance == produtoResiduo
     }
 
     void "Test that the edit action returns the correct model"() {
@@ -84,11 +84,11 @@ class ResiduoControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def residuo = new ProdutoResiduo(params)
-            controller.edit(residuo)
+            def produtoResiduo = new ProdutoResiduo(params)
+            controller.edit(produtoResiduo)
 
         then:"A model is populated containing the domain instance"
-            model.residuoInstance == residuo
+            model.produtoResiduoInstance == produtoResiduo
     }
 
     void "Test the update action performs an update on a valid domain instance"() {
@@ -98,28 +98,28 @@ class ResiduoControllerSpec extends Specification {
             controller.update(null)
 
         then:"A 404 error is returned"
-            response.redirectedUrl == '/residuo/index'
+            response.redirectedUrl == '/produtoResiduo/index'
             flash.message != null
 
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def residuo = new ProdutoResiduo()
-            residuo.validate()
-            controller.update(residuo)
+            def produtoResiduo = new ProdutoResiduo()
+            produtoResiduo.validate()
+            controller.update(produtoResiduo)
 
         then:"The edit view is rendered again with the invalid instance"
             view == 'edit'
-            model.residuoInstance == residuo
+            model.produtoResiduoInstance == produtoResiduo
 
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            residuo = new ProdutoResiduo(params).save(flush: true)
-            controller.update(residuo)
+            produtoResiduo = new ProdutoResiduo(params).save(flush: true)
+            controller.update(produtoResiduo)
 
         then:"A redirect is issues to the show action"
-            response.redirectedUrl == "/residuo/show/$residuo.id"
+            response.redirectedUrl == "/produtoResiduo/show/$produtoResiduo.id"
             flash.message != null
     }
 
@@ -130,23 +130,23 @@ class ResiduoControllerSpec extends Specification {
             controller.delete(null)
 
         then:"A 404 is returned"
-            response.redirectedUrl == '/residuo/index'
+            response.redirectedUrl == '/produtoResiduo/index'
             flash.message != null
 
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def residuo = new ProdutoResiduo(params).save(flush: true)
+            def produtoResiduo = new ProdutoResiduo(params).save(flush: true)
 
         then:"It exists"
             ProdutoResiduo.count() == 1
 
         when:"The domain instance is passed to the delete action"
-            controller.delete(residuo)
+            controller.delete(produtoResiduo)
 
         then:"The instance is deleted"
             ProdutoResiduo.count() == 0
-            response.redirectedUrl == '/residuo/index'
+            response.redirectedUrl == '/produtoResiduo/index'
             flash.message != null
     }
 }

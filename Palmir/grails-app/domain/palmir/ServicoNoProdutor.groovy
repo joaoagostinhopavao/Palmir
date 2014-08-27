@@ -2,20 +2,21 @@ package palmir
 
 class ServicoNoProdutor {
 	String assinaturaCliente
-	Produtor idProdutor
+	Produtor identProdutor
 	
-	static hasOne=[residuo:Residuo, carga:Carga]
+	
+	static hasOne=[residuo:ResiduoProduzido,carga:Carga]
 	static belongsTo=[gar:GAR]
 
     static constraints = {
 		gar()
-		residuo(nullable:true)
-		carga(nullable:true)
+		residuo unique:true, nullable:true
+		carga unique:true,nullable:true
 		
 		assinaturaCliente()
     }
 	
 	String toString(){
-		"Transporte de "+"${residuo}"+"para"+"${idProdutor}"
+		"Transporte de "+"${residuo}"+"para"+"${identProdutor}"
 	}
 }

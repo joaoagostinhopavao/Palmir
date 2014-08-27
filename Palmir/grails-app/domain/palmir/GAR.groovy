@@ -7,6 +7,6 @@ class GAR {
 	static hasOne=[servicoCliente:ServicoNoProdutor]
 
     static constraints = {
-		servicoCliente(nullable:true)
+		servicoCliente(nullable:true, unique:true)
     }
 }

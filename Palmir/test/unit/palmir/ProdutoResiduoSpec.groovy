@@ -7,7 +7,7 @@ import spock.lang.Specification
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
 @TestFor(ProdutoResiduo)
-class ResiduoSpec extends Specification {
+class ProdutoResiduoSpec extends Specification {
 
     def setup() {
     }

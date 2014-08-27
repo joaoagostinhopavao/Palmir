@@ -5,10 +5,11 @@ class Carga {
 	String dataPrevista
 	String data
 	String hora
-	
-	static belongsTo=[servico:ServicoNoProdutor]
+	ServicoNoProdutor servico
+
 
     static constraints = {
+		servico nullable:true
 		dataPrevista()
 		data()
 		hora()

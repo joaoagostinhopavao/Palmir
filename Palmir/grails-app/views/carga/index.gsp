@@ -24,13 +24,13 @@
 			<thead>
 					<tr>
 					
+						<th><g:message code="carga.servico.label" default="Servico" /></th>
+					
 						<g:sortableColumn property="dataPrevista" title="${message(code: 'carga.dataPrevista.label', default: 'Data Prevista')}" />
 					
 						<g:sortableColumn property="data" title="${message(code: 'carga.data.label', default: 'Data')}" />
 					
 						<g:sortableColumn property="hora" title="${message(code: 'carga.hora.label', default: 'Hora')}" />
-					
-						<th><g:message code="carga.servico.label" default="Servico" /></th>
 					
 					</tr>
 				</thead>
@@ -38,13 +38,13 @@
 				<g:each in="${cargaInstanceList}" status="i" var="cargaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${cargaInstance.id}">${fieldValue(bean: cargaInstance, field: "dataPrevista")}</g:link></td>
+						<td><g:link action="show" id="${cargaInstance.id}">${fieldValue(bean: cargaInstance, field: "servico")}</g:link></td>
+					
+						<td>${fieldValue(bean: cargaInstance, field: "dataPrevista")}</td>
 					
 						<td>${fieldValue(bean: cargaInstance, field: "data")}</td>
 					
 						<td>${fieldValue(bean: cargaInstance, field: "hora")}</td>
-					
-						<td>${fieldValue(bean: cargaInstance, field: "servico")}</td>
 					
 					</tr>
 				</g:each>

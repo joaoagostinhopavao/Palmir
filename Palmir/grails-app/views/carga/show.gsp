@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list carga">
 			
+				<g:if test="${cargaInstance?.servico}">
+				<li class="fieldcontain">
+					<span id="servico-label" class="property-label"><g:message code="carga.servico.label" default="Servico" /></span>
+					
+						<span class="property-value" aria-labelledby="servico-label"><g:link controller="servicoNoProdutor" action="show" id="${cargaInstance?.servico?.id}">${cargaInstance?.servico?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${cargaInstance?.dataPrevista}">
 				<li class="fieldcontain">
 					<span id="dataPrevista-label" class="property-label"><g:message code="carga.dataPrevista.label" default="Data Prevista" /></span>
@@ -46,15 +55,6 @@
 					<span id="hora-label" class="property-label"><g:message code="carga.hora.label" default="Hora" /></span>
 					
 						<span class="property-value" aria-labelledby="hora-label"><g:fieldValue bean="${cargaInstance}" field="hora"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${cargaInstance?.servico}">
-				<li class="fieldcontain">
-					<span id="servico-label" class="property-label"><g:message code="carga.servico.label" default="Servico" /></span>
-					
-						<span class="property-value" aria-labelledby="servico-label"><g:link controller="servicoNoProdutor" action="show" id="${cargaInstance?.servico?.id}">${cargaInstance?.servico?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

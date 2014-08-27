@@ -2,6 +2,15 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: cargaInstance, field: 'servico', 'error')} ">
+	<label for="servico">
+		<g:message code="carga.servico.label" default="Servico" />
+		
+	</label>
+	<g:select id="servico" name="servico.id" from="${palmir.ServicoNoProdutor.list()}" optionKey="id" value="${cargaInstance?.servico?.id}" class="many-to-one" noSelection="['null': '']"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: cargaInstance, field: 'dataPrevista', 'error')} required">
 	<label for="dataPrevista">
 		<g:message code="carga.dataPrevista.label" default="Data Prevista" />
@@ -26,15 +35,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="hora" required="" value="${cargaInstance?.hora}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: cargaInstance, field: 'servico', 'error')} required">
-	<label for="servico">
-		<g:message code="carga.servico.label" default="Servico" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="servico" name="servico.id" from="${palmir.ServicoNoProdutor.list()}" optionKey="id" required="" value="${cargaInstance?.servico?.id}" class="many-to-one"/>
 
 </div>
 

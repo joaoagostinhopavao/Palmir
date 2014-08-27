@@ -32,7 +32,7 @@
 					
 						<g:sortableColumn property="assinaturaCliente" title="${message(code: 'servicoNoProdutor.assinaturaCliente.label', default: 'Assinatura Cliente')}" />
 					
-						<th><g:message code="servicoNoProdutor.idProdutor.label" default="Id Produtor" /></th>
+						<th><g:message code="servicoNoProdutor.identProdutor.label" default="Ident Produtor" /></th>
 					
 					</tr>
 				</thead>
@@ -48,7 +48,7 @@
 					
 						<td>${fieldValue(bean: servicoNoProdutorInstance, field: "assinaturaCliente")}</td>
 					
-						<td>${fieldValue(bean: servicoNoProdutorInstance, field: "idProdutor")}</td>
+						<td>${fieldValue(bean: servicoNoProdutorInstance, field: "identProdutor")}</td>
 					
 					</tr>
 				</g:each>

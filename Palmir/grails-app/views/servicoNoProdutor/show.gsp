@@ -36,7 +36,7 @@
 				<li class="fieldcontain">
 					<span id="residuo-label" class="property-label"><g:message code="servicoNoProdutor.residuo.label" default="Residuo" /></span>
 					
-						<span class="property-value" aria-labelledby="residuo-label"><g:link controller="residuo" action="show" id="${servicoNoProdutorInstance?.residuo?.id}">${servicoNoProdutorInstance?.residuo?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="residuo-label"><g:link controller="residuoProduzido" action="show" id="${servicoNoProdutorInstance?.residuo?.id}">${servicoNoProdutorInstance?.residuo?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -59,11 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${servicoNoProdutorInstance?.idProdutor}">
+				<g:if test="${servicoNoProdutorInstance?.identProdutor}">
 				<li class="fieldcontain">
-					<span id="idProdutor-label" class="property-label"><g:message code="servicoNoProdutor.idProdutor.label" default="Id Produtor" /></span>
+					<span id="identProdutor-label" class="property-label"><g:message code="servicoNoProdutor.identProdutor.label" default="Ident Produtor" /></span>
 					
-						<span class="property-value" aria-labelledby="idProdutor-label"><g:link controller="produtor" action="show" id="${servicoNoProdutorInstance?.idProdutor?.id}">${servicoNoProdutorInstance?.idProdutor?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="identProdutor-label"><g:link controller="produtor" action="show" id="${servicoNoProdutorInstance?.identProdutor?.id}">${servicoNoProdutorInstance?.identProdutor?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
