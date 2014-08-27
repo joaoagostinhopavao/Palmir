@@ -3,7 +3,7 @@
   <packageImport xmi:id="_qB-eYCP9EeSksKR9TZ2A-w">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Class" xmi:id="_kG2WACP4EeSksKR9TZ2A-w" name="Residuo">
+  <packagedElement xmi:type="uml:Class" xmi:id="_kG2WACP4EeSksKR9TZ2A-w" name="ResiduoProduzido">
     <ownedAttribute xmi:id="_77FnQCP4EeSksKR9TZ2A-w" name="codigoLER"/>
     <ownedAttribute xmi:id="_GrvGYCP5EeSksKR9TZ2A-w" name="descricao"/>
     <ownedAttribute xmi:id="_ra6hwCVyEeSEEZX3BkmE5A" name="unidadesMedida">
@@ -98,16 +98,6 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sfz9USP-EeSksKR9TZ2A-w" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_M7ZpcCQAEeSksKR9TZ2A-w" name="gARsToEntidades" memberEnd="_M7aQgCQAEeSksKR9TZ2A-w _M7beoCQAEeSksKR9TZ2A-w" navigableOwnedEnd="_M7beoCQAEeSksKR9TZ2A-w">
-    <ownedEnd xmi:id="_M7aQgCQAEeSksKR9TZ2A-w" name="gARs" type="_CcYfICP7EeSksKR9TZ2A-w" aggregation="composite" association="_M7ZpcCQAEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M7a3kCQAEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M7a3kSQAEeSksKR9TZ2A-w" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:id="_M7beoCQAEeSksKR9TZ2A-w" name="entidades" type="_26qdgCP8EeSksKR9TZ2A-w" association="_M7ZpcCQAEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M7cFsCQAEeSksKR9TZ2A-w" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M7cFsSQAEeSksKR9TZ2A-w" value="3"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_w6USYCQBEeSksKR9TZ2A-w" name="ServicoNoProdutor">
     <ownedAttribute xmi:id="_aRYqcCVxEeSEEZX3BkmE5A" name="assinaturaCliente">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -156,16 +146,6 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pbbpgCQCEeSksKR9TZ2A-w" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_3GMJUCQCEeSksKR9TZ2A-w" name="servicosToResiduos" memberEnd="_3GMwYCQCEeSksKR9TZ2A-w _3GNXcSQCEeSksKR9TZ2A-w" navigableOwnedEnd="_3GNXcSQCEeSksKR9TZ2A-w">
-    <ownedEnd xmi:id="_3GMwYCQCEeSksKR9TZ2A-w" name="servicos" type="_w6USYCQBEeSksKR9TZ2A-w" aggregation="composite" association="_3GMJUCQCEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3GMwYSQCEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3GNXcCQCEeSksKR9TZ2A-w" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:id="_3GNXcSQCEeSksKR9TZ2A-w" name="residuos" type="_kG2WACP4EeSksKR9TZ2A-w" association="_3GMJUCQCEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3GN-gCQCEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3GN-gSQCEeSksKR9TZ2A-w" value="1"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_CsfeECQDEeSksKR9TZ2A-w" name="Carga">
     <ownedAttribute xmi:id="_IUj50CQDEeSksKR9TZ2A-w" name="dataPrevista"/>
     <ownedAttribute xmi:id="_I5ImgCQDEeSksKR9TZ2A-w" name="data"/>
@@ -194,21 +174,12 @@
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_4cbuECQDEeSksKR9TZ2A-w" name="TipoEmbalagem">
-    <ownedAttribute xmi:id="_70CjECQDEeSksKR9TZ2A-w" name="granel">
+    <ownedAttribute xmi:id="_70CjECQDEeSksKR9TZ2A-w" name="tipo">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_70ICoCQDEeSksKR9TZ2A-w"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_70ICoSQDEeSksKR9TZ2A-w" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_ADQVgCQEEeSksKR9TZ2A-w" name="Embalagem">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ADV1ECQEEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ADV1ESQEEeSksKR9TZ2A-w" value="1"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:id="_RBHk0CQEEeSksKR9TZ2A-w" name="tnque">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RBNEYCQEEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RBNEYSQEEeSksKR9TZ2A-w" value="1"/>
-    </ownedAttribute>
+    <ownedAttribute xmi:id="_ZrXpEC3REeSh26OvELSIuQ" name="descricao"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_-jGU4CQEEeSksKR9TZ2A-w" name="NaoConformidades">
     <ownedComment xmi:id="_M5yzsCVwEeSEEZX3BkmE5A" annotatedElement="_-jGU4CQEEeSksKR9TZ2A-w">
@@ -272,26 +243,6 @@
     <ownedEnd xmi:id="_s9abIiQFEeSksKR9TZ2A-w" name="naoConformidadess" type="_-jGU4CQEEeSksKR9TZ2A-w" association="_s9ZNACQFEeSksKR9TZ2A-w">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s9bCMCQFEeSksKR9TZ2A-w"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s9bCMSQFEeSksKR9TZ2A-w" value="*"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_wZ4iACQFEeSksKR9TZ2A-w" name="transportesToViaturas" memberEnd="_wZ4iASQFEeSksKR9TZ2A-w _wZ5wICQFEeSksKR9TZ2A-w" navigableOwnedEnd="_wZ5wICQFEeSksKR9TZ2A-w">
-    <ownedEnd xmi:id="_wZ4iASQFEeSksKR9TZ2A-w" name="transportes" type="_Nq3soCQCEeSksKR9TZ2A-w" aggregation="composite" association="_wZ4iACQFEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wZ5JECQFEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wZ5JESQFEeSksKR9TZ2A-w" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:id="_wZ5wICQFEeSksKR9TZ2A-w" name="viaturas" type="_DSSA0CQFEeSksKR9TZ2A-w" association="_wZ4iACQFEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wZ5wISQFEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wZ5wIiQFEeSksKR9TZ2A-w" value="*"/>
-    </ownedEnd>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_xBLLgCQFEeSksKR9TZ2A-w" name="transportesToMotoristas" memberEnd="_xBLLgSQFEeSksKR9TZ2A-w _xBMZoSQFEeSksKR9TZ2A-w" navigableOwnedEnd="_xBMZoSQFEeSksKR9TZ2A-w">
-    <ownedEnd xmi:id="_xBLLgSQFEeSksKR9TZ2A-w" name="transportes" type="_Nq3soCQCEeSksKR9TZ2A-w" aggregation="composite" association="_xBLLgCQFEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xBLykCQFEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xBMZoCQFEeSksKR9TZ2A-w" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:id="_xBMZoSQFEeSksKR9TZ2A-w" name="motoristas" type="_BkgQYCQFEeSksKR9TZ2A-w" association="_xBLLgCQFEeSksKR9TZ2A-w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xBNAsCQFEeSksKR9TZ2A-w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xBNAsSQFEeSksKR9TZ2A-w" value="*"/>
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_H-yWwCQGEeSksKR9TZ2A-w" name="gARsToTransportes" memberEnd="_H-y90CQGEeSksKR9TZ2A-w _H-zk4SQGEeSksKR9TZ2A-w" navigableOwnedEnd="_H-zk4SQGEeSksKR9TZ2A-w">
@@ -630,14 +581,77 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2xLzQSVuEeSEEZX3BkmE5A" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_Pw3fcCbZEeSL5JGRlEnc1w" name="servicoNoProdutorsToDestinoResiduos" memberEnd="_Pw3fcSbZEeSL5JGRlEnc1w _Pw57sCbZEeSL5JGRlEnc1w" navigableOwnedEnd="_Pw57sCbZEeSL5JGRlEnc1w">
-    <ownedEnd xmi:id="_Pw3fcSbZEeSL5JGRlEnc1w" name="servicoNoProdutors" type="_w6USYCQBEeSksKR9TZ2A-w" aggregation="composite" association="_Pw3fcCbZEeSL5JGRlEnc1w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pw5UoCbZEeSL5JGRlEnc1w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pw5UoSbZEeSL5JGRlEnc1w" value="1"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_j7BJYC3QEeSh26OvELSIuQ" name="ClassificacaoResiduo">
+    <ownedAttribute xmi:id="_2kV08C3QEeSh26OvELSIuQ" name="capitulo">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2kXqIC3QEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2kYRMC3QEeSh26OvELSIuQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_5-DiwC3QEeSh26OvELSIuQ" name="codigo"/>
+    <ownedAttribute xmi:id="_9TcKMC3QEeSh26OvELSIuQ" name="descricao">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9TemcC3QEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9TemcS3QEeSh26OvELSIuQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_-8KbgC3QEeSh26OvELSIuQ" name="subCapitulo">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-8LpoC3QEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-8LpoS3QEeSh26OvELSIuQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ajp9wC3REeSh26OvELSIuQ" name="unidadeDeMedida">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AjrL4C3REeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AjrL4S3REeSh26OvELSIuQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_j-qd0C3REeSh26OvELSIuQ" name="ResiduoProduzidos" memberEnd="_j-s6EC3REeSh26OvELSIuQ _j-vWUS3REeSh26OvELSIuQ" navigableOwnedEnd="_j-vWUS3REeSh26OvELSIuQ">
+    <ownedEnd xmi:id="_j-s6EC3REeSh26OvELSIuQ" name="residuoProduzidos" type="_kG2WACP4EeSksKR9TZ2A-w" association="_j-qd0C3REeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j-uIMC3REeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j-vWUC3REeSh26OvELSIuQ" value="*"/>
     </ownedEnd>
-    <ownedEnd xmi:id="_Pw57sCbZEeSL5JGRlEnc1w" name="destinoResiduos" association="_Pw3fcCbZEeSL5JGRlEnc1w">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pw57sSbZEeSL5JGRlEnc1w"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pw57sibZEeSL5JGRlEnc1w" value="*"/>
+    <ownedEnd xmi:id="_j-vWUS3REeSh26OvELSIuQ" name="classificacaoResiduos" type="_j7BJYC3QEeSh26OvELSIuQ" association="_j-qd0C3REeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j-v9YC3REeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j-v9YS3REeSh26OvELSIuQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8D7iwC3TEeSh26OvELSIuQ" name="gARsToEntidades" memberEnd="_8D7iwS3TEeSh26OvELSIuQ _8D8J0i3TEeSh26OvELSIuQ" navigableOwnedEnd="_8D8J0i3TEeSh26OvELSIuQ">
+    <ownedEnd xmi:id="_8D7iwS3TEeSh26OvELSIuQ" name="gARs" type="_CcYfICP7EeSksKR9TZ2A-w" aggregation="shared" association="_8D7iwC3TEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8D8J0C3TEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8D8J0S3TEeSh26OvELSIuQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_8D8J0i3TEeSh26OvELSIuQ" name="entidades" type="_26qdgCP8EeSksKR9TZ2A-w" association="_8D7iwC3TEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8D8J0y3TEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8D8J1C3TEeSh26OvELSIuQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Ht4ocC3UEeSh26OvELSIuQ" name="servicoNoProdutorsToResiduoProduzidos" memberEnd="_Ht5PgC3UEeSh26OvELSIuQ _Ht5Pgy3UEeSh26OvELSIuQ" navigableOwnedEnd="_Ht5Pgy3UEeSh26OvELSIuQ">
+    <ownedEnd xmi:id="_Ht5PgC3UEeSh26OvELSIuQ" name="servicoNoProdutors" type="_w6USYCQBEeSksKR9TZ2A-w" aggregation="composite" association="_Ht4ocC3UEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ht5PgS3UEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ht5Pgi3UEeSh26OvELSIuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Ht5Pgy3UEeSh26OvELSIuQ" name="residuoProduzidos" type="_kG2WACP4EeSksKR9TZ2A-w" association="_Ht4ocC3UEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ht5PhC3UEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ht5PhS3UEeSh26OvELSIuQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_N8KIkC3UEeSh26OvELSIuQ" name="transportesToViaturas" memberEnd="_N8KIkS3UEeSh26OvELSIuQ _N8KIlC3UEeSh26OvELSIuQ" navigableOwnedEnd="_N8KIlC3UEeSh26OvELSIuQ">
+    <ownedEnd xmi:id="_N8KIkS3UEeSh26OvELSIuQ" name="transportes" type="_Nq3soCQCEeSksKR9TZ2A-w" aggregation="shared" association="_N8KIkC3UEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_N8KIki3UEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_N8KIky3UEeSh26OvELSIuQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_N8KIlC3UEeSh26OvELSIuQ" name="viaturas" type="_DSSA0CQFEeSksKR9TZ2A-w" association="_N8KIkC3UEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_N8KvoC3UEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_N8KvoS3UEeSh26OvELSIuQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_P4Qo4C3UEeSh26OvELSIuQ" name="transportesToMotoristas" memberEnd="_P4Qo4S3UEeSh26OvELSIuQ _P4RP8i3UEeSh26OvELSIuQ" navigableOwnedEnd="_P4RP8i3UEeSh26OvELSIuQ">
+    <ownedEnd xmi:id="_P4Qo4S3UEeSh26OvELSIuQ" name="transportes" type="_Nq3soCQCEeSksKR9TZ2A-w" aggregation="shared" association="_P4Qo4C3UEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P4RP8C3UEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P4RP8S3UEeSh26OvELSIuQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_P4RP8i3UEeSh26OvELSIuQ" name="motoristas" type="_BkgQYCQFEeSksKR9TZ2A-w" association="_P4Qo4C3UEeSh26OvELSIuQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P4RP8y3UEeSh26OvELSIuQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P4RP9C3UEeSh26OvELSIuQ" value="*"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>

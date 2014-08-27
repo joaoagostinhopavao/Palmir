@@ -128,6 +128,7 @@
                                 </div>
                                 </div>
 			<a href="residuo/index.gsp">Carregue aqui</a>
+			<a href="index-teste.html">teste</a>
 		</div>
 		
 		
