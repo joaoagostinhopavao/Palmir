@@ -18,4 +18,4 @@ encoding//grails-app/i18n/messages_ru.properties=UTF-8
 encoding//grails-app/i18n/messages_sv.properties=UTF-8
 encoding//grails-app/i18n/messages_th.properties=UTF-8
 encoding//grails-app/i18n/messages_zh_CN.properties=UTF-8
-encoding//grails-app/views/index-teste.html=UTF-8
+encoding//web-app/index-teste.html=UTF-8
