@@ -1,44 +1,16 @@
 <!DOCTYPE html>
 
 <html>
+	
     <head>
+    <meta name="layout" content="main"/>
         <title>CSS Framework - Containers</title>
         
         
     </head>
     <body>
-       
-       c
-        
-        <h2>Tabs</h2>
-        <div id="myTabs">
-            <span class="ui-icon ui-icon-close" style="float:right;"></span>
-            <ul>
-                
-                <li><a href="#a">Tab1</a></li>
-                <li><a href="#b">Tab2</a></li>
-                <li><a href="#c">Registar</a></li>
-            </ul>
-            <div id="a">Este ������ o painel contentor ligado ao primeiro tab. ������ mostrado por defeito.</div>
-            <div id="b">Este conte������do pertence ao segundo tab e s������ ser������ mostrado quando o tab 2 for clicado.</div>
-            <div id="c">
-                <form>
-                    <label>Email:</label>
-                    <input type="email">
-                    <input type="submit">
-                </form>
-            </div>
-        </div>
-        
-        <h2>Bot������es</h2>
-        <div id="buttonPalmi">
-            <span class="ui-icon-custom">
-            </span>
-        </div>
-        
-        <a href="#" id="criar">Uma ancora como bot������o</a>
-        
-        <h2>Palmiresiduos</h2>
+ 
+
         <div id="menu">
             <div id="palmiToolbarWrapper">
                 <div id="palmiToolbar">
@@ -58,11 +30,12 @@
                 </div>
                 <div class="col">
                     <span class="servicosIco"></span>
-                    <a class="subMenuButton" id="criarServicos" href="#">SERVI������OS</a>
+                    <a class="subMenuButton" id="criarServicos" href="#">SERVIÇOS</a>
                     <span class="residuosIco"></span>
-                    <a class="subMenuButton" id="criarResiduos" href="#">RES������DUOS</a>
+                    <a class="subMenuButton" id="criarResiduos" href="#">RESÍDUOS</a>
                     <span class="catResiduosIco"></span>
-                    <a class="subMenuButton" id="criarCatResiduos" href="#">CATEGORIA RESIDUOS</a>
+                    <g:link controller="classificacaoResiduo" action="create" class="subMenuButton" id="criarCatResiduos">CATEGORIA RESIDUOS</g:link>
+                    <!--  <a class="subMenuButton" id="criarCatResiduos" href="#">CATEGORIA RESIDUOS</a>-->
                 </div>
                 <div class="col">
                     <span class="entidadesIco"></span>

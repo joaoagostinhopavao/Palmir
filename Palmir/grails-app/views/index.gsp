@@ -127,7 +127,8 @@
                                     <p>Este é um contentor .ui-widget-content</p>
                                 </div>
                                 </div>
-			<a href="residuo/index.gsp">Carregue aqui</a>
+			<a href=>Carregue aqui</a>
+			<g:link controller="indexTeste">Vai!</g:link>
 		</div>
 		
 		

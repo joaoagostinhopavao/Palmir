@@ -15,12 +15,12 @@ and open the template in the editor.
 /*--------------- Icons -----------------*/
 
 .ui-button .ui-icon .palmiIcon{
-    background-image: url(../img/botoes_menu_palmresiduos.png); //imagem no estado normal
+    background-image: url(botoes_menu_palmresiduos.png); //imagem no estado normal
     background-repeat: no-repeat;
     background-position: 0px 0px;
     width:100px;
     height: 150px;
-    border:1px solid red;
+    //border:1px solid red;
     
 }
 
@@ -38,15 +38,15 @@ and open the template in the editor.
 
 /*----------------- Menu --------------------*/
 div#menu{
-    width:1024px;
+    width:959px;
     height:413px;
-    border:1px solid red;
+    //border:1px solid red;
 }
 
  /*--------------- Sub menu ------------------*/
 
 div#criarCard{
-    background: url("images/box_submenu_palmresiduos.png") 0px 0px;  
+    background-image: url(box_submenu_palmresiduos.png) 0px 0px;  
     width:684px;
     height: 173px;
     margin:-40px auto;
@@ -56,7 +56,7 @@ div#criarCard{
 }
 
 div#consultarCard{
-    background: url("images/box_submenu_palmresiduos.png") 0px -183px;  
+    background: url("box_submenu_palmresiduos.png") 0px -183px;  
     width:684px;
     height: 173px;
     margin:-40px auto;
@@ -64,7 +64,7 @@ div#consultarCard{
 }
 
 div#editarCard{
-    background: url("images/box_submenu_palmresiduos.png") 0px -366px;  
+    background: url("box_submenu_palmresiduos.png") 0px -366px;  
     width:684px;
     height: 173px;
     margin:-40px auto;
@@ -81,9 +81,9 @@ div#editarCard{
         /*---------------- Toolbar ------------------*/
 
 #palmiToolbarWrapper{
-    width:1024px;
+    width:959px;
     height: 240px;
-    background: url("images/faixa_menu_palmresiduos.png");
+    background: url("palmi/faixa_menu_palmresiduos.png");
 }
 
 #palmiToolbar{
@@ -95,7 +95,7 @@ div#editarCard{
 .palmiCriar{
     display:block;
     background-repeat: no-repeat;
-    background: url("images/botoes_menu_palmresiduos.png") 40px 0;
+    background: url("palmi/botoes_menu_palmresiduos.png") 40px 0;
     width:144px;
     height: 170px;
     
@@ -103,19 +103,19 @@ div#editarCard{
 }
 
 .palmiCriarHover{
-    background: url("images/botoes_menu_palmresiduos.png") 40px -216px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") 40px -216px;  
     width:144px;
     height: 170px;
 }
 
 .palmiCriarEnable{
-    background: url("images/botoes_menu_palmresiduos.png") 40px -432px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") 40px -432px;  
     width:144px;
     height: 170px;
 }
 
 .palmiCriarDisable{
-    background: url("images/botoes_menu_palmresiduos.png") 40px -648px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") 40px -648px;  
     width:144px;
     height: 170px;
 }
@@ -123,7 +123,7 @@ div#editarCard{
 
 .palmiConsultar{
     display:block;
-    background: url("images/botoes_menu_palmresiduos.png") -176px 0;
+    background: url("palmi/botoes_menu_palmresiduos.png") -176px 0;
     width:144px;
     height: 170px;
     border-left:2px solid grey;
@@ -131,19 +131,19 @@ div#editarCard{
 }
 
 .palmiConsultarHover{
-    background: url("images/botoes_menu_palmresiduos.png") -176px -216px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") -176px -216px;  
     width:144px;
     height: 170px;
 }
 
 .palmiConsultarEnable{
-    background: url("images/botoes_menu_palmresiduos.png") -176px -432px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") -176px -432px;  
     width:144px;
     height: 170px;
 }
 
 .palmiConsultarDisable{
-    background: url("images/botoes_menu_palmresiduos.png") -176px -648px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") -176px -648px;  
     width:144px;
     height: 170px;
 }
@@ -151,26 +151,26 @@ div#editarCard{
 
 .palmiEditar{
     display:block;
-    background: url("images/botoes_menu_palmresiduos.png") -392px 0;
+    background: url("palmi/botoes_menu_palmresiduos.png") -392px 0;
     width:144px;
     height: 170px;
     //border:1px solid red;
 }
 
 .palmiEditarHover{
-    background: url("images/botoes_menu_palmresiduos.png") -392px -216px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") -392px -216px;  
     width:144px;
     height: 170px;
 }
 
 .palmiEditarEnable{
-    background: url("images/botoes_menu_palmresiduos.png") -392px -432px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") -392px -432px;  
     width:144px;
     height: 170px;
 }
 
 .palmiEditarDisable{
-    background: url("images/botoes_menu_palmresiduos.png") -392px -648px;  
+    background: url("palmi/botoes_menu_palmresiduos.png") -392px -648px;  
     width:144px;
     height: 170px;
 }
@@ -213,39 +213,39 @@ div#editarCard{
 }
 
 .viaturasIco{
-    background: url("images/icon_submenu_palmresiduos.png");
+    background: url("palmi/icon_submenu_palmresiduos.png");
 }
 .utilizadoresIco{
-    background: url("images/icon_submenu_palmresiduos.png") 0 -26px;
+    background: url("palmi/icon_submenu_palmresiduos.png") 0 -26px;
 }
 
 .transportadoresIco{
-    background: url("images/icon_submenu_palmresiduos.png") 0 -51px;
+    background: url("palmi/icon_submenu_palmresiduos.png") 0 -51px;
 }
 .servicosIco{
-    background: url("images/icon_submenu_palmresiduos.png") -40px 0px;
+    background: url("palmi/icon_submenu_palmresiduos.png") -40px 0px;
 }
 .residuosIco{
-    background: url("images/icon_submenu_palmresiduos.png") -40px -26px;
+    background: url("palmi/icon_submenu_palmresiduos.png") -40px -26px;
 }
 .catResiduosIco{
-    background: url("images/icon_submenu_palmresiduos.png") -40px -51px;
+    background: url("palmi/icon_submenu_palmresiduos.png") -40px -51px;
 }
 .entidadesIco{
-    background: url("images/icon_submenu_palmresiduos.png") -71px 0px;
+    background: url("palmi/icon_submenu_palmresiduos.png") -71px 0px;
 }
 .garIco{
-    background: url("images/icon_submenu_palmresiduos.png") -71px -26px;
+    background: url("palmi/icon_submenu_palmresiduos.png") -71px -26px;
 }
 .garCdIco{
-    background: url("images/icon_submenu_palmresiduos.png") -71px -51px;
+    background: url("palmi/icon_submenu_palmresiduos.png") -71px -51px;
 }
 
 
 #buttonPalmi>span.ui-icon-custom{
     background-color: white;
     border:none;
-    background-image: url("images/botoes_menu_palmresiduos.png");
+    background-image: url("palmi/botoes_menu_palmresiduos.png");
     //border:1px solid red;
     background-position: 0px 0px;
     width:144px;
