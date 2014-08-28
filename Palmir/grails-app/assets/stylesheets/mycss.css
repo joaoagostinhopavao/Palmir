@@ -46,7 +46,7 @@ div#menu{
  /*--------------- Sub menu ------------------*/
 
 div#criarCard{
-    background-image: url(box_submenu_palmresiduos.png) 0px 0px;  
+    background: url(palmi/box_submenu_palmresiduos.png) 0px 0px;  
     width:684px;
     height: 173px;
     margin:-40px auto;
@@ -56,7 +56,7 @@ div#criarCard{
 }
 
 div#consultarCard{
-    background: url("box_submenu_palmresiduos.png") 0px -183px;  
+    background: url("palmi/box_submenu_palmresiduos.png") 0px -183px;  
     width:684px;
     height: 173px;
     margin:-40px auto;
@@ -64,7 +64,7 @@ div#consultarCard{
 }
 
 div#editarCard{
-    background: url("box_submenu_palmresiduos.png") 0px -366px;  
+    background: url("palmi/box_submenu_palmresiduos.png") 0px -366px;  
     width:684px;
     height: 173px;
     margin:-40px auto;
@@ -83,7 +83,8 @@ div#editarCard{
 #palmiToolbarWrapper{
     width:959px;
     height: 240px;
-    background: url("palmi/faixa_menu_palmresiduos.png");
+    background: url("palmi/faixa_menu_palmresiduos.png") -31px 0px;
+    
 }
 
 #palmiToolbar{
