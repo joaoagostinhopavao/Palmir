@@ -81,79 +81,54 @@
 		</style>
 	</head>
 	<body>
-		
-        
-        <h2>Palmiresiduos</h2>
-        <div id="menu">
-            <div id="palmiToolbarWrapper">
-                <div id="palmiToolbar">
-                    <a class="palmiCriar" href="#"></a>
-                    <a class="palmiConsultar" href="#"></a>
-                    <a class="palmiEditar" href="#"></a>
-                </div>
-            </div>
-            <div class="pop" id="criarCard">
-                <div class="col">
-                    <span class="viaturasIco"></span>
-                    <a class="subMenuButton" id="criarViaturas" href="#">VIATURAS</a>
-                    <span class="utilizadoresIco"></span>
-                    <a class="subMenuButton" id="criarUtilizadores" href="#">UTILIZADORES</a>
-                    <span class="transportadoresIco"></span>
-                    <a class="subMenuButton" id="criarTransportadores" href="#">TRANSPORTADORES</a>
-                </div>
-                <div class="col">
-                    <span class="servicosIco"></span>
-                    <a class="subMenuButton" id="criarServicos" href="#">SERVI��OS</a>
-                    <span class="residuosIco"></span>
-                    <a class="subMenuButton" id="criarResiduos" href="#">RES��DUOS</a>
-                    <span class="catResiduosIco"></span>
-                    <a class="subMenuButton" id="criarCatResiduos" href="#">CATEGORIA RESIDUOS</a>
-                </div>
-                <div class="col">
-                    <span class="entidadesIco"></span>
-                    <a class="subMenuButton" id="criarEntidades" href="#">ENTIDADES</a>
-                    <span class="garIco"></span>
-                    <a class="subMenuButton" id="criarGar" href="#">GAR</a>
-                    <span class="garCdIco"></span>
-                    <a class="subMenuButton" id="criarGarCd" href="#">GAR CD</a>
-                </div>
-            </div>
-            <div class="pop" id="consultarCard">
-                <div class="col">
-                    <a class="subMenuButton" id="consultarViaturas" href="#"></a>
-                    <a class="subMenuButton" id="consultarUtilizadores" href="#"></a>
-                    <a class="subMenuButton" id="consultarTransportadores" href="#"></a>
-                </div>
-                <div class="col">
-                    <a class="subMenuButton" id="consultarServicos" href="#"></a>
-                    <a class="subMenuButton" id="consultarResiduos" href="#"></a>
-                    <a class="subMenuButton" id="consultarCatResiduos" href="#"></a>
-                </div>
-                <div class="col">
-                    <a class="subMenuButton" id="consultarEntidades" href="#"></a>
-                    <a class="subMenuButton" id="consultarGar" href="#"></a>
-                    <a class="subMenuButton" id="consultarGarCd" href="#"></a>
-                </div>
-            </div>
-            <div class="pop" id="editarCard">
-                <div class="col">
-                    <a class="subMenuButton" id="editarViaturas" href="#"></a>
-                    <a class="subMenuButton" id="editarUtilizadores" href="#"></a>
-                    <a class="subMenuButton" id="editarTransportadores" href="#"></a>
-                </div>
-                <div class="col">
-                    <a class="subMenuButton" id="editarServicos" href="#"></a>
-                    <a class="subMenuButton" id="editarResiduos" href="#"></a>
-                    <a class="subMenuButton" id="editarCatResiduos" href="#"></a>
-                </div>
-                <div class="col">
-                    <a class="subMenuButton" id="editarEntidades" href="#"></a>
-                    <a class="subMenuButton" id="editarGar" href="#"></a>
-                    <a class="subMenuButton" id="editarGarCd" href="#"></a>
-                </div>
-            </div>
-        </div>
-        
+		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div id="status" role="complementary">
+			<h1>Application Status</h1>
+			<ul>
+				<li>App version: <g:meta name="app.version"/></li>
+				<li>Grails version: <g:meta name="app.grails.version"/></li>
+				<li>Groovy version: ${GroovySystem.getVersion()}</li>
+				<li>JVM version: ${System.getProperty('java.version')}</li>
+				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
+				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
+				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
+				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
+				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
+			</ul>
+			<h1>Installed Plugins</h1>
+			<ul>
+				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
+					<li>${plugin.name} - ${plugin.version}</li>
+				</g:each>
+			</ul>
+		</div>
+		<div id="page-body" role="main">
+			<h1>Welcome to Grails</h1>
+			<p>Congratulations, you have successfully started your first Grails application! At the moment
+			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
+			   content you may choose. Below is a list of controllers that are currently deployed in this application,
+			   click on each to execute its default action:</p>
+
+			<div id="controller-list" role="navigation">
+				<h2>Available Controllers:</h2>
+				<ul>
+					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+					</g:each>
+				</ul>
+			</div>
+			<h2>Containers</h2>
+                                <div class="ui-widget">
+                                    <div class="ui-widget-header ui-corner-top">
+                
+                                    <h2>Este é um contentor .ui-widget-header</h2> 
+                                    </div>
+                                <div class="ui-widget-content ui-corner-bottom">
+                                    <p>Este é um contentor .ui-widget-content</p>
+                                </div>
+                                </div>
+			<a href="residuo/index.gsp">Carregue aqui</a>
+		</div>
 		
 		
 		
