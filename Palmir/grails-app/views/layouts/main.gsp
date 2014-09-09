@@ -21,9 +21,8 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<!-- <div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="palmi/logo_palmresiduos.png" alt="Grails"/></a></div> 
-		-->
-		<div id="grailsLogo" role="banner"><g:link controller="backoffice" action="index"><asset:image src="palmi/logo_palmresiduos.png" alt="Grails"/></g:link></div>
+
+		<div id="grailsLogo" role="banner"><g:link controller="backoffice" action="index"><asset:image src="palmi/logo_palmresiduos.png" alt="Palmiresiduos"/></g:link></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

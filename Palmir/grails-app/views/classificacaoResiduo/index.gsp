@@ -24,8 +24,6 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="classificacaoResiduo.residuo.label" default="Residuo" /></th>
-					
 						<g:sortableColumn property="capitulo" title="${message(code: 'classificacaoResiduo.capitulo.label', default: 'Capitulo')}" />
 					
 						<g:sortableColumn property="subCapitulo" title="${message(code: 'classificacaoResiduo.subCapitulo.label', default: 'Sub Capitulo')}" />
@@ -36,15 +34,15 @@
 					
 						<g:sortableColumn property="unidadeDeMedida" title="${message(code: 'classificacaoResiduo.unidadeDeMedida.label', default: 'Unidade De Medida')}" />
 					
+						<th></th>
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${classificacaoResiduoInstanceList}" status="i" var="classificacaoResiduoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${classificacaoResiduoInstance.id}">${fieldValue(bean: classificacaoResiduoInstance, field: "residuo")}</g:link></td>
-					
-						<td>${fieldValue(bean: classificacaoResiduoInstance, field: "capitulo")}</td>
+						<td><g:link action="show" id="${classificacaoResiduoInstance.id}">${fieldValue(bean: classificacaoResiduoInstance, field: "capitulo")}</g:link></td>
 					
 						<td>${fieldValue(bean: classificacaoResiduoInstance, field: "subCapitulo")}</td>
 					
@@ -53,6 +51,8 @@
 						<td>${fieldValue(bean: classificacaoResiduoInstance, field: "descricao")}</td>
 					
 						<td>${fieldValue(bean: classificacaoResiduoInstance, field: "unidadeDeMedida")}</td>
+					
+						<td></td>
 					
 					</tr>
 				</g:each>

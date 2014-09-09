@@ -1,2 +1,6 @@
 @CHARSET "US-ASCII";
 
+#splash{
+	width:300px;
+	margin: 10px auto;
+}

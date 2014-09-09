@@ -24,11 +24,11 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="GAR.servicoCliente.label" default="Servico Cliente" /></th>
-					
 						<g:sortableColumn property="numeroGAR" title="${message(code: 'GAR.numeroGAR.label', default: 'Numero GAR')}" />
 					
 						<g:sortableColumn property="tipoGAR" title="${message(code: 'GAR.tipoGAR.label', default: 'Tipo GAR')}" />
+					
+						<th><g:message code="GAR.servicoCliente.label" default="Servico Cliente" /></th>
 					
 					</tr>
 				</thead>
@@ -36,11 +36,11 @@
 				<g:each in="${GARInstanceList}" status="i" var="GARInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${GARInstance.id}">${fieldValue(bean: GARInstance, field: "servicoCliente")}</g:link></td>
-					
-						<td>${fieldValue(bean: GARInstance, field: "numeroGAR")}</td>
+						<td><g:link action="show" id="${GARInstance.id}">${fieldValue(bean: GARInstance, field: "numeroGAR")}</g:link></td>
 					
 						<td>${fieldValue(bean: GARInstance, field: "tipoGAR")}</td>
+					
+						<td>${fieldValue(bean: GARInstance, field: "servicoCliente")}</td>
 					
 					</tr>
 				</g:each>

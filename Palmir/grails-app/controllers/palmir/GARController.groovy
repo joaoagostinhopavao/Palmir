@@ -1,104 +1,115 @@
 package palmir
 
-
-
-import static org.springframework.http.HttpStatus.*
-import grails.transaction.Transactional
-
-@Transactional(readOnly = true)
 class GARController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    def index = { redirect(action: "list", params: params) }
 
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond GAR.list(params), model:[GARInstanceCount: GAR.count()]
+    // the delete, save and update actions only accept POST requests
+    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+
+    def list = {
+        params.max = Math.min(params.max ? params.max.toInteger() : 10,  100)
+        [GARInstanceList: GAR.list(params), GARInstanceTotal: GAR.count()]
     }
 
-    def show(GAR GARInstance) {
-        respond GARInstance
+    def create = {
+        def GARInstance = new GAR()
+        GARInstance.properties = params
+        return [GARInstance: GARInstance]
     }
 
-    def create() {
-        respond new GAR(params)
-    }
-
-    @Transactional
-    def save(GAR GARInstance) {
-        if (GARInstance == null) {
-            notFound()
-            return
+    def save = {
+        def GARInstance = new GAR(params)
+        if (!GARInstance.hasErrors() && GARInstance.save()) {
+            flash.message = "GAR.created"
+            flash.args = [GARInstance.id]
+            flash.defaultMessage = "GAR ${GARInstance.id} created"
+            redirect(action: "show", id: GARInstance.id)
         }
-
-        if (GARInstance.hasErrors()) {
-            respond GARInstance.errors, view:'create'
-            return
+        else {
+            render(view: "create", model: [GARInstance: GARInstance])
         }
+    }
 
-        GARInstance.save flush:true
+    def show = {
+        def GARInstance = GAR.get(params.id)
+        if (!GARInstance) {
+            flash.message = "GAR.not.found"
+            flash.args = [params.id]
+            flash.defaultMessage = "GAR not found with id ${params.id}"
+            redirect(action: "list")
+        }
+        else {
+            return [GARInstance: GARInstance]
+        }
+    }
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'GAR.label', default: 'GAR'), GARInstance.id])
-                redirect GARInstance
+    def edit = {
+        def GARInstance = GAR.get(params.id)
+        if (!GARInstance) {
+            flash.message = "GAR.not.found"
+            flash.args = [params.id]
+            flash.defaultMessage = "GAR not found with id ${params.id}"
+            redirect(action: "list")
+        }
+        else {
+            return [GARInstance: GARInstance]
+        }
+    }
+
+    def update = {
+        def GARInstance = GAR.get(params.id)
+        if (GARInstance) {
+            if (params.version) {
+                def version = params.version.toLong()
+                if (GARInstance.version > version) {
+                    
+                    GARInstance.errors.rejectValue("version", "GAR.optimistic.locking.failure", "Another user has updated this GAR while you were editing")
+                    render(view: "edit", model: [GARInstance: GARInstance])
+                    return
+                }
             }
-            '*' { respond GARInstance, [status: CREATED] }
-        }
-    }
-
-    def edit(GAR GARInstance) {
-        respond GARInstance
-    }
-
-    @Transactional
-    def update(GAR GARInstance) {
-        if (GARInstance == null) {
-            notFound()
-            return
-        }
-
-        if (GARInstance.hasErrors()) {
-            respond GARInstance.errors, view:'edit'
-            return
-        }
-
-        GARInstance.save flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'GAR.label', default: 'GAR'), GARInstance.id])
-                redirect GARInstance
+            GARInstance.properties = params
+            if (!GARInstance.hasErrors() && GARInstance.save()) {
+                flash.message = "GAR.updated"
+                flash.args = [params.id]
+                flash.defaultMessage = "GAR ${params.id} updated"
+                redirect(action: "show", id: GARInstance.id)
             }
-            '*'{ respond GARInstance, [status: OK] }
+            else {
+                render(view: "edit", model: [GARInstance: GARInstance])
+            }
+        }
+        else {
+            flash.message = "GAR.not.found"
+            flash.args = [params.id]
+            flash.defaultMessage = "GAR not found with id ${params.id}"
+            redirect(action: "edit", id: params.id)
         }
     }
 
-    @Transactional
-    def delete(GAR GARInstance) {
-
-        if (GARInstance == null) {
-            notFound()
-            return
-        }
-
-        GARInstance.delete flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'GAR.label', default: 'GAR'), GARInstance.id])
-                redirect action:"index", method:"GET"
+    def delete = {
+        def GARInstance = GAR.get(params.id)
+        if (GARInstance) {
+            try {
+                GARInstance.delete()
+                flash.message = "GAR.deleted"
+                flash.args = [params.id]
+                flash.defaultMessage = "GAR ${params.id} deleted"
+                redirect(action: "list")
             }
-            '*'{ render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'GAR.label', default: 'GAR'), params.id])
-                redirect action: "index", method: "GET"
+            catch (org.springframework.dao.DataIntegrityViolationException e) {
+                flash.message = "GAR.not.deleted"
+                flash.args = [params.id]
+                flash.defaultMessage = "GAR ${params.id} could not be deleted"
+                redirect(action: "show", id: params.id)
             }
-            '*'{ render status: NOT_FOUND }
+        }
+        else {
+            flash.message = "GAR.not.found"
+            flash.args = [params.id]
+            flash.defaultMessage = "GAR not found with id ${params.id}"
+            redirect(action: "list")
         }
     }
 }

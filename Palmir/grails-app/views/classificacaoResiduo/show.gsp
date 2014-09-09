@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list classificacaoResiduo">
 			
-				<g:if test="${classificacaoResiduoInstance?.residuo}">
-				<li class="fieldcontain">
-					<span id="residuo-label" class="property-label"><g:message code="classificacaoResiduo.residuo.label" default="Residuo" /></span>
-					
-						<span class="property-value" aria-labelledby="residuo-label"><g:link controller="residuoProduzido" action="show" id="${classificacaoResiduoInstance?.residuo?.id}">${classificacaoResiduoInstance?.residuo?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${classificacaoResiduoInstance?.capitulo}">
 				<li class="fieldcontain">
 					<span id="capitulo-label" class="property-label"><g:message code="classificacaoResiduo.capitulo.label" default="Capitulo" /></span>
@@ -73,6 +64,15 @@
 					<span id="unidadeDeMedida-label" class="property-label"><g:message code="classificacaoResiduo.unidadeDeMedida.label" default="Unidade De Medida" /></span>
 					
 						<span class="property-value" aria-labelledby="unidadeDeMedida-label"><g:fieldValue bean="${classificacaoResiduoInstance}" field="unidadeDeMedida"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${classificacaoResiduoInstance?.residuo}">
+				<li class="fieldcontain">
+					<span id="residuo-label" class="property-label"><g:message code="classificacaoResiduo.residuo.label" default="Residuo" /></span>
+					
+						<span class="property-value" aria-labelledby="residuo-label"><g:link controller="residuoProduzido" action="show" id="${classificacaoResiduoInstance?.residuo?.id}">${classificacaoResiduoInstance?.residuo?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

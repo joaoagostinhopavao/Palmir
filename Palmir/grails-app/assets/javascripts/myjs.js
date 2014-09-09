@@ -39,7 +39,7 @@ $(document).ready(function($){
        event.preventDefault();
        $(this).toggleClass("palmiCriarEnable",10,"easeOutSine");
        $(".pop").hide();
-    
+       $("#splash").hide();
        $("#criarCard").show();
    });
    
@@ -52,19 +52,21 @@ $(document).ready(function($){
        event.preventDefault();
        $(this).toggleClass("palmiConsultarEnable",10,"easeOutSine");
        $(".pop").hide();
+       $("#splash").hide();
        $("#consultarCard").show();
        
    });
    
    $(".palmiEditar").hover(function(){
-       $(this).removeClass("palmiEditarEnable");
-       $(this).toggleClass("palmiEditarHover",10,"easeOutSine");
+       //$(this).removeClass("palmiEditarEnable");
+       $(this).toggleClass("palmiEditarHover");
    }); 
    
    $(".palmiEditar").click(function(){
        event.preventDefault();
-       $(this).toggleClass("palmiEditarEnable",10,"easeOutSine");
+       $(this).toggleClass("palmiEditarEnable");
        $(".pop").hide();
+       $("#splash").hide();
        $("#editarCard").show();
        
    });

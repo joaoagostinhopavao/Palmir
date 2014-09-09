@@ -12,12 +12,12 @@ class ClassificacaoResiduo {
 	static belongsTo=[residuo:ResiduoProduzido]
 
     static constraints = {
-		residuo nullable:true
 		capitulo()
 		subCapitulo()
 		codigo()
 		descricao(maxSize:200)
 		unidadeDeMedida inList:["gramas","kilos","toneladas","centilitros","litros","Klitros"]
+		residuo nullable:true
     }
 	
 	String toString(){
